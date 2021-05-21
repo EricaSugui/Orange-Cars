@@ -1,4 +1,4 @@
-# Orange-Cars :car: :orange_car: : orange:
+# Orange-Cars  :orange: :car: :car:
 Repositório do projeto de API-REST para controle de veículos de usuário.
 
 ## Primeiro Passo:
