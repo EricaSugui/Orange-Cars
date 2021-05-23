@@ -28,19 +28,19 @@ public class Usuario {
 	@NotBlank(message = "Campo obrigatório, não pode ser em branco.")
 	private String cpf;
 	
-	@Column(nullable = false)
+	@Column(name = "nascimento", nullable = false)
 	@NotNull(message = "Campo obrigatório, não pode ser nulo.")
 	@NotBlank(message = "Campo obrigatório, não pode ser em branco.")
-	private Date dataNascimento;
+	private String dataNascimento;
 	
 	public Usuario() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public Usuario(
-			@NotNull(message = "Campo obrigatório, não pode ser nulo.") @NotBlank(message = "Campo obrigatório, não pode ser em branco.") String nome,
-			@NotNull(message = "Campo obrigatório, não pode ser nulo.") @NotBlank(message = "Campo obrigatório, não pode ser em branco.") String cpf,
-			@NotNull(message = "Campo obrigatório, não pode ser nulo.") @NotBlank(message = "Campo obrigatório, não pode ser em branco.") Date dataNascimento) {
+			String nome,
+			String cpf,
+			String dataNascimento) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
@@ -71,11 +71,11 @@ public class Usuario {
 		this.cpf = cpf;
 	}
 
-	public Date getDataNascimento() {
+	public String getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento (String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	
