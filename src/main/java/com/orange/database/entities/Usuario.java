@@ -1,13 +1,15 @@
 package com.orange.database.entities;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -32,6 +34,9 @@ public class Usuario {
 	@NotNull(message = "Campo obrigatório, não pode ser nulo.")
 	@NotBlank(message = "Campo obrigatório, não pode ser em branco.")
 	private String dataNascimento;
+	
+	@OneToMany(mappedBy = "usuario")
+	private List<Veiculo> veiculos = new ArrayList<>();
 	
 	public Usuario() {
 		// TODO Auto-generated constructor stub
